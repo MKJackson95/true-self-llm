@@ -1,0 +1,23 @@
+﻿# Secrets — never commit
+.env
+.env.*
+!.env.example
+*.key
+
+# Virtual environment
+.venv/
+venv/
+
+# Python
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+
+# Analysis output
+analysis/figures/*.png
+.Rhistory
+.RData
+
+# OS
+.DS_Store
+Thumbs.db
