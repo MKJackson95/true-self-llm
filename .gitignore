@@ -21,3 +21,4 @@ analysis/figures/*.png
 # OS
 .DS_Store
 Thumbs.db
+~$*
