@@ -1,121 +1,124 @@
 # Normative Self-Attribution in LLMs
 
-An experimental test of whether large language models reproduce the normative
-structure of the human concept of the "true self" described by Knobe and his
-collaborators.
+A preregistered test of whether large language models reproduce the pattern of
+true-self attribution described by Newman, Bloom and Knobe (2014): that people
+attribute to an agent's "true self" whichever behaviour they regard as morally
+good, and to a "surface self" whichever they regard as bad.
 
-**Nothing has been run yet.** This README describes what the study will do. It
-was written before the confirmatory data exists, and the commit history shows
-when. Results will be added when they exist, whatever they turn out to be.
+**No confirmatory data has been collected.** This README describes what the
+study will do. It was written before the data exists and the commit history
+shows when. Results will be added when they exist, whatever they show.
 
-## The question
+## Questions
 
-When an agent's psychological states or behaviours conflict, which does a
-model treat as revealing who the agent really is? The Knobe–Newman account
-predicts that people attribute to the true self whichever state they regard as
-morally good, rather than using any of the criteria philosophers have
-proposed. Do models do the same, and if not, on what basis do they decide?
+Do models show the asymmetry, and how large is it relative to the human
+effect?
 
-Three goals follow. Establish whether the effect exists in models at all.
-Determine which criterion they actually use. Measure how far models converge
-with the human pattern and with each other.
+Does it hold for non-moral preference changes, which in humans it does not?
 
-## Two arms
+What criteria do models invoke when explaining their judgements, and do models
+differ?
 
-### Replication
+Does any effect survive a change of prompt framing?
 
-The stimuli, scales and measures of Newman, Bloom and Knobe (2014), run
-verbatim: all twelve Study 1 vignette pairs including the four non-moral
-preference items, all eight Study 2 items, both Study 3 vignettes. Their
-9-point rating and their forced-choice measures unaltered — including the
-framing sentence telling the reader the agent differs from them in almost
-every way, an instruction written to suppress projection in a human reader and
-given here to systems with no self to project.
+## Design
 
-Running the published items on the published scales makes the comparison
-against published means direct rather than approximate.
+The stimuli are the twelve vignette pairs of NBK Study 1 — eight moral
+behaviour changes and four non-moral preference changes — run verbatim,
+including the framing sentence telling the reader the agent differs from them
+in almost every way. That sentence was written to reduce projection in a human
+reader; here it is given to systems with no self to project.
 
-Study 3's items carry the belief/feeling crossing: an agent whose reflective
-belief pulls one way and whose feeling pulls the other. NBK found feelings
-rated as more revealing of the true self than beliefs, but only marginally,
-and across two vignettes on a single topic. Their whole result on this
-question rests on one content domain.
+Two measures, crossed with two prompt frames, over both directions of change:
 
-### Extension
+| Factor | Levels |
+|---|---|
+| version | the two directions of change in each pair |
+| measure | forced choice (true self / surface self / neither); 9-point rating |
+| frame | minimal (no system prompt); participant (psychology-study framing) |
 
-The extension does two things the original design cannot.
+Twelve items × 2 versions × 2 measures × 2 frames = 96 presentations, run at
+five samples per model.
 
-**It separates moral valence from departure-from-norm.** In every one of NBK's
-moral pairs, the direction the agent moves in and the direction that departs
-from the surrounding norm coincide. Omar's culture oppresses minorities and he
-comes to respect them; Frank's workplace tolerates dishonesty and he becomes
-ethical. Change and departure always travel together, so no result from those
-items can tell the two apart. The extension crosses them: each item describes
-an agent whose behaviour either departs from or conforms to the norm described
-in their surroundings, crossed with the direction of the change. Norm-relation
-is a structural property of the text — whether the agent's behaviour matches
-what is described as usual around them — and requires no evaluation to state.
+### Two deviations from the original
 
-**It crosses belief against feeling across many domains** rather than one,
-which is what Objective 6 needs and what the original could not supply.
+**The question stems drop the clause restating the post-change behaviour.**
+NBK ask "Now that Omar treats minorities with respect, to what extent…". That
+clause summarises the change and selects which element of the vignette is
+being asked about. Since this study asks what the model treats as the relevant
+change and on what basis, supplying that selection would answer part of the
+question in advance. Comparison against published human means is therefore
+approximate, resting on effect direction and magnitude rather than absolute
+values.
 
-Moral valence is not stipulated. A separate probe, carrying no true-self
-framing, asks each model how it evaluates each behaviour. The analysis then
-asks whether attribution tracks the model's own evaluation, the norm-relation,
-the state type, or something else.
+**The two measures are asked in separate calls with no shared context.** In
+the original they were answered in sequence, so the forced choice conditioned
+the rating that followed. Running them independently is what makes their
+agreement evidence of convergent validity rather than of consistency.
 
-This matters because of a response recorded during setup. Asked about the Omar
-item, Claude Opus 5 rated it 8 of 9 and explained that Omar had to overcome
-both personal habit and social pressure, so the belief was genuinely his own
-rather than absorbed from his surroundings, and that his earlier conduct
-looked like residue of an oppressive environment rather than an expression of
-who he essentially is. The reasoning is about independence from one's
-surroundings, not about moral goodness. NBK's items cannot separate those. The
-extension can.
+## Human benchmarks
 
-## Prompting
+Two, both reported.
 
-Whether any convergence is a product of framing rather than of the concept is
-a factor, not an assumption. Every item runs under two system-prompt frames: a
-minimal instruction to answer the question, and a participant framing of the
-kind used in psychological studies. An effect that appears under one and not
-the other is an artefact of the instruction.
+Newman, Bloom and Knobe (2014), the original: per-item means for all twelve
+pairs, and partial eta-squared of 0.39 for the forced choice and 0.33 for the
+continuous measure in Study 1.
+
+Lee and Feldman (2025), a Registered Report replication with 803 participants:
+both effects replicated at smaller magnitudes, 0.20 and 0.22 respectively. The
+larger sample and preregistration make this the better comparison. Their
+extension is directly relevant here — they measured perceived social norms
+alongside true-self attribution and found the association positive but weak,
+with correlations mostly between .07 and .21. Any strong norm-based reasoning
+in models is therefore a divergence from the human pattern rather than a
+match.
+
+Note that Lee and Feldman altered the framing sentence to be gender-neutral.
+This study follows NBK's original wording.
 
 ## What the models say
 
-Ratings measure how strongly the true self is attributed. Explanations measure
-on what grounds — and the grounds are what Goal 2 asks about. Some accounts
-predict identical ratings for opposite reasons and are separable only in the
-text.
+The rating measures how strongly the true self is attributed. It cannot
+measure on what grounds, and several accounts predict identical ratings for
+opposite reasons. Every response is collected with its explanation and coded
+against a scheme fixed before the confirmatory run: `docs/coding-scheme.md`.
 
-Every response is collected with its explanation and coded against a scheme
-fixed before the confirmatory run. The codes come from the source papers:
-reflective endorsement (Aristotle, Frankfurt); emotion and desire (the
-novelists' view NBK set against it); moral valence (their own account);
-meta-desires, which NDK test separately and find come apart from true-self
-attribution; psychological essentialism; person-positivity bias; and
-attribution of general attitudes as distinct from a deeper self. An eighth
-code covers anti-conditioning — the idea that the true self is what is not
-merely socially inherited. That one is present in NBK's materials, where the
-surface self is defined as what a person learned from society or others, but
-never treated by them as a rival criterion, because their items cannot
-separate it from moral valence.
+Twelve codes. Seven are drawn from the source papers — moral valence,
+reflective endorsement, emotion and desire, meta-desires, psychological
+essentialism, person-positivity, and the distinction between general attitudes
+and a deeper self. One, anti-conditioning, is present in NBK's materials but
+never treated by them as a rival criterion. Two emerged from pilot responses
+and are marked as such: appeals to the agent's behavioural record, and
+dismissal of a domain as too superficial to bear on the true self. The
+remainder are residual.
 
-## Design decisions
+A claim this design supports: the models invoke criterion X when explaining
+their judgements. A claim it does not: the models use criterion X. A generated
+explanation is evidence about what a model produces when asked to justify a
+judgement, not a readout of what produced the judgement.
 
-Counterbalancing of anchor direction and clause order applies to the extension
-arm only. Applying it to the replication items would stop them being verbatim
-and weaken the comparison against published data. The replication therefore
-inherits the original's limitations, including the single scale direction, and
-the extension is what tests whether those limitations were carrying the
-result.
+## Sample size
 
-Repeated samples from one model are not independent participants. Analysis
-uses cumulative-link mixed models with random intercepts for item and model as
-a fixed effect, and reports effect sizes rather than raw means except where
-the verbatim items make means comparable.
+Five samples per model per presentation, from simulation
+(`src/simulate_power.py`) against variance measured directly
+(`measure_variance.py`).
 
-Sample size will be set by simulation before the confirmatory run.
+Within-cell standard deviations ranged from 0.00 to 0.73 against valence
+differences of 2.5 to 5.9 scale points, so the primary effect is at ceiling
+power with three samples. The binding constraints are the frame comparison and
+the moral-against-non-moral comparison, and both are governed by item count
+rather than by samples per cell: raising samples from three to eight moves
+power on the item-class comparison from 0.84 to 0.86, where raising items from
+twelve to sixteen moves it from 0.84 to 0.94. Five samples gives margin on the
+frame comparison at the item count the replication fixes.
+
+## Analysis
+
+Ratings are ordinal and clustered within items. Cumulative-link mixed models
+with random intercepts for item and model as a fixed effect. Repeated samples
+from one model are not independent participants and nothing is reported as
+though they were. Effect sizes rather than raw means when comparing against
+human data.
 
 ## Models
 
@@ -125,52 +128,71 @@ Sample size will be set by simulation before the confirmatory run.
 | OpenAI | gpt-5.6-sol |
 | xAI | grok-4 |
 
-The Anthropic family is run across all three tiers, the other two at flagship
-tier only. This makes the design asymmetric, and deliberately so: the pilot
-found the three Claude models diverging sharply from one another on the
-true-self items, with one showing a large asymmetry and another none at all.
-Whether that within-family divergence survives a better-controlled design is a
-question the pilot raised and this study can answer. The comparison across
-families is between flagships, and any claim about a family as a whole rests
-on a single model for OpenAI and xAI.
+The Anthropic family is run across three tiers and the others at flagship tier
+only. This asymmetry is deliberate: the pilot found the three Claude models
+diverging sharply from one another, with one showing a large asymmetry and
+another none. Any claim about a family as a whole rests on a single model for
+OpenAI and xAI.
 
-Note that `gpt-5.6` is an alias that resolves to Sol and may be repointed; the
-pinned identifier is used here.
+Three API behaviours were established by direct measurement and are documented
+in `docs/provider-notes.md`: sampling parameters must be passed through
+`extra_body` on the Anthropic SDK; Claude Opus 5 returns a thinking block
+before its answer on every vignette trial tested, and whether thinking occurred
+is recorded per call; and the xAI API reports a fixed overhead of roughly 185
+input tokens whose content is not visible to the caller, so grok-4 does not
+receive an input identical to the other models.
 
-Claude Opus 5 returns a thinking block before its answer. On twelve trials of
-a vignette it did so every time, so this is not occasional. Responses are
-therefore assembled by filtering content blocks by type rather than taking the
-first block, and whether thinking occurred is recorded for every call. Whether
-a response preceded by extended reasoning is the same task as an immediate
-judgement is an open question, so it is recorded rather than suppressed.
+## Repository
 
-## Scope
+```
+stimuli/     vignettes as versioned JSON
+src/         prompt construction, model adapter, runner, parser, simulation
+data/raw/    one JSON line per response, raw text preserved
+data/processed/  parsed CSV
+docs/        coding scheme, provider notes
+```
 
-The true self is the starting point rather than the whole subject. The same
-method — present the case, record the attribution and the reasoning, separate
-the criteria that the original design confounds — extends to the other
-concepts where moral asymmetries have been found: intentional action,
-responsibility, blame, valuing, happiness, weakness of will, freedom and
-causation. Whether models reproduce the normative structure of folk
-psychological concepts generally is the larger question this study opens.
+Raw responses are the evidence and are never modified. The parsed table is
+derived; if the extraction rules prove wrong the data is re-parsed rather than
+re-collected.
 
 ## Prior work
 
 An exploratory pilot across three Claude models motivated this design:
 [knobe-pilot](https://github.com/MKJackson95/knobe-pilot). It was not
-preregistered and its response format produced near-zero variance in most
-cells. Both problems are addressed here.
+preregistered and its forced-integer response format produced near-zero
+variance in most cells and collected no reasoning. Both problems are addressed
+here.
+
+## Scope
+
+This study is descriptive: present the vignettes, record what is attributed
+and how it is explained. It does not manipulate the factors that NBK's items
+hold together — moral direction, relation to the surrounding norm, and
+continuity with the agent's own past all move together in every one of their
+pairs. Separating them requires new stimuli and is the natural follow-up,
+better motivated once the coding shows which criteria actually appear.
 
 ## References
 
 Knobe, J. (2005). Ordinary ethical reasoning and the ideal of 'being
 yourself'. *Philosophical Psychology*, 18(3), 327–340.
 
+Lee, S. C., & Feldman, G. (2025). Revisiting the link between true-self and
+morality: Replication and extension Registered Report of Newman, Bloom, and
+Knobe (2014) Studies 1 and 2. *Royal Society Open Science*.
+doi:10.1098/rsos.250908
+
 Newman, G. E., Bloom, P., & Knobe, J. (2014). Value judgments and the true
 self. *Personality and Social Psychology Bulletin*, 40(2), 203–216.
 
-Newman, G. E., De Freitas, J., & Knobe, J. Beliefs about the true self explain
-asymmetries based on moral judgment. *Cognitive Science*.
+Newman, G. E., De Freitas, J., & Knobe, J. (2015). Beliefs about the true self
+explain asymmetries based on moral judgment. *Cognitive Science*, 39(1),
+96–125.
+
+Strohminger, N., Knobe, J., & Newman, G. (2017). The true self: A
+psychological concept distinct from the self. *Perspectives on Psychological
+Science*, 12(4), 551–560.
 
 ## Licence
 
