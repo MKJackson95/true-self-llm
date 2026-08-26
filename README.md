@@ -9,6 +9,11 @@ good, and to a "surface self" whichever they regard as bad.
 study will do. It was written before the data exists and the commit history
 shows when. Results will be added when they exist, whatever they show.
 
+## Preregistration
+
+Registered on OSF before any confirmatory data was collected:
+[10.17605/OSF.IO/3NZA7](https://doi.org/10.17605/OSF.IO/3NZA7)
+
 ## Questions
 
 Do models show the asymmetry, and how large is it relative to the human
