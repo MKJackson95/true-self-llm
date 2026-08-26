@@ -12,31 +12,11 @@ pattern is left blank and given a status, rather than guessed at. The status
 counts printed at the end are part of the result: a model that frequently
 fails to produce a usable answer has told you something.
 
---------------------------------------------------------------------------
-VERSION 2 — corrections applied after the confirmatory run
---------------------------------------------------------------------------
+Patterns the smoke test showed are needed:
 
-Version 1 was fixed before preregistration. Inspection of the seven responses
-it failed to parse showed that six were extraction errors rather than model
-failures: in every case the model had given a clear answer that the patterns
-did not match. Version 2 corrects two faults. The change is documented as a
-deviation from the preregistration; both versions are run over the same raw
-data and the results of each are reported.
-
-**Fault 1: refusal detection fired on hedged answers.** The refusal pattern
-matched "I can't" anywhere in the opening 200 characters, without regard to
-whether an answer had already been given. Two responses that began with a
-valid rating and went on to say "I can't rate this higher" or "I can't be
-certain" were classified as refusals. Refusal is now tested only where no
-rating or choice could be extracted.
-
-**Fault 2: leading markup and labels blocked extraction.** Responses opening
-"# Answer: (c)" or "**Letter: (b)**" were unmatched. Markdown heading markers
-are now stripped alongside emphasis, and the recognised label set is widened
-to include "letter", "choice" and "option".
-
-Neither change alters what counts as an answer. Both make the patterns match
-answers that were already present and unambiguous.
+  markdown emphasis     **2** and **1** wrap the rating in asterisks
+  leading rating        every observed response opens with the answer
+  forced-choice letter  (a), a), a., or a bare a at the start
 """
 
 from __future__ import annotations
@@ -72,16 +52,14 @@ FIELDS = [
     "stop_reason",
 ]
 
-# An optional label some models put before the answer, e.g. "Rating: 7",
-# "Answer: (c)", "Letter: (b)". Kept to a closed list rather than
-# anything-before-a-colon, so that a sentence happening to contain a number is
-# not mistaken for an answer.
+# An optional label some models put before the answer, e.g. "Rating: 7".
+# Kept to a short closed list rather than anything-before-a-colon, so that a
+# sentence happening to contain a number is not mistaken for an answer.
 _LABEL = re.compile(
-    r"^\s*(rating|answer|score|response|letter|choice|option)\s*[:\-–—]\s*",
-    re.IGNORECASE,
+    r"^\s*(rating|answer|score|response)\s*[:\-–—]\s*", re.IGNORECASE
 )
 
-# A rating: optional markup, one or two digits, at the start.
+# A rating: optional markdown emphasis, one or two digits, at the start.
 _RATING = re.compile(r"^\W{0,4}(\d{1,2})\b")
 
 # A forced-choice letter: (a) / a) / a. / a: / bare a, at the start.
@@ -99,15 +77,8 @@ _REFUSAL = re.compile(
 )
 
 
-def strip_markup(text: str) -> str:
-    """Remove markdown emphasis and heading markers from the start and body.
-
-    Version 1 stripped emphasis only. Heading markers left responses opening
-    "# Answer: (c)" unmatched.
-    """
-    cleaned = re.sub(r"[*_`]+", "", text)
-    cleaned = re.sub(r"^\s*#+\s*", "", cleaned)
-    return cleaned.strip()
+def strip_emphasis(text: str) -> str:
+    return re.sub(r"[*_`]+", "", text).strip()
 
 
 def extract_rating(text: str, scale_max: int = 9):
@@ -115,28 +86,25 @@ def extract_rating(text: str, scale_max: int = 9):
     if not text or not text.strip():
         return None, "", "empty"
 
-    clean = _LABEL.sub("", strip_markup(text))
+    clean = _LABEL.sub("", strip_emphasis(text))
 
-    match = _RATING.match(clean)
-    if match:
-        value = int(match.group(1))
-        explanation = clean[match.end():].lstrip(" .,:;-–—")
-        if not 1 <= value <= scale_max:
-            return None, clean, "out_of_range"
-        return value, explanation, "ok"
-
-    first_word = clean.split()[0].lower().strip(".,:;") if clean.split() else ""
-    if first_word in _WORDS:
-        value = _WORDS[first_word]
-        explanation = clean[len(first_word):].lstrip(" .,:;-–—")
-        return value, explanation, "ok_word"
-
-    # Refusal is tested only where no answer was found. A hedge following a
-    # valid rating is not a refusal.
     if _REFUSAL.search(clean[:200]):
         return None, clean, "refusal"
 
-    return None, clean, "no_rating"
+    match = _RATING.match(clean)
+    if not match:
+        first_word = clean.split()[0].lower().strip(".,:;") if clean.split() else ""
+        if first_word in _WORDS:
+            value = _WORDS[first_word]
+            explanation = clean[len(first_word):].lstrip(" .,:;-–—")
+            return value, explanation, "ok_word"
+        return None, clean, "no_rating"
+
+    value = int(match.group(1))
+    explanation = clean[match.end():].lstrip(" .,:;-–—")
+    if not 1 <= value <= scale_max:
+        return None, clean, "out_of_range"
+    return value, explanation, "ok"
 
 
 def extract_choice(text: str):
@@ -144,22 +112,18 @@ def extract_choice(text: str):
     if not text or not text.strip():
         return None, "", "empty"
 
-    clean = _LABEL.sub("", strip_markup(text))
-
-    match = _CHOICE.match(clean)
-    if match:
-        letter = match.group(1).lower()
-        explanation = clean[match.end():].lstrip(" .,:;-–—")
-        return letter, explanation, "ok"
+    clean = _LABEL.sub("", strip_emphasis(text))
 
     if _REFUSAL.search(clean[:200]):
         return None, clean, "refusal"
 
-    return None, clean, "no_choice"
+    match = _CHOICE.match(clean)
+    if not match:
+        return None, clean, "no_choice"
 
-
-def _blank(value):
-    return "" if value is None else value
+    letter = match.group(1).lower()
+    explanation = clean[match.end():].lstrip(" .,:;-–—")
+    return letter, explanation, "ok"
 
 
 def main(argv=None):
@@ -199,7 +163,7 @@ def main(argv=None):
 
             row = dict(rec)
             row.update({
-                "rating": _blank(rating),
+                "rating": rating if rating is not None else "",
                 "choice": choice,
                 "explanation": explanation,
                 "parse_status": status,
