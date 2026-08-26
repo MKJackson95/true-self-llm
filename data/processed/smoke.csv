@@ -1,0 +1,155 @@
+call_id,timestamp,model_key,model_id,family,item_id,item_class,domain,name,version,measure,frame,temperature,sample_index,thinking,rating,choice,explanation,parse_status,input_tokens,output_tokens,stop_reason
+f58f123be57d41ec,2026-08-26T05:22:13.275600+00:00,haiku,claude-haiku-4-5,anthropic,nbk_s1_father,moral,parenting,Al,b,rating,minimal,1.0,0,False,2,,"
+
+Al is being profoundly unfaithful to his deepest nature. If his past behavior reflected his genuine character—his capacity for love and care—then his present detachment represents a betrayal of who he actually is, regardless of what circumstances or changes may have caused this shift.",ok,157,65,end_turn
+884fc25cc10c9b80,2026-08-26T05:22:13.437223+00:00,haiku,claude-haiku-4-5,anthropic,nbk_s1_father,moral,parenting,Al,a,rating,minimal,1.0,0,False,9,,"
+
+Al's transformation demonstrates profound authenticity to his deepest self because being true to one's essential nature means actualizing one's capacity for growth, love, and moral development—not remaining locked in past patterns. His change reveals who he genuinely is beneath his previous behaviors, suggesting his caring fatherhood reflects his authentic values more accurately than his former neglect did.",ok,151,80,end_turn
+dd6d1d686c2ed433,2026-08-26T05:22:15.093447+00:00,haiku,claude-haiku-4-5,anthropic,nbk_s1_terrorism,moral,political_violence,Amir,a,rating,minimal,1.0,0,False,8,,"
+
+Amir is being true to his deepest self because he's following his capacity for moral reasoning and conscience—faculties that are fundamental to human agency regardless of culture or background. His willingness to change a previously held belief when he recognizes it as wrong suggests he's honoring his core ability to reflect critically and grow, which is more essential to authentic selfhood than any particular political ideology he might have inherited.",ok,147,91,end_turn
+6a50a88b5a9a55e0,2026-08-26T05:22:16.327529+00:00,grok,grok-4,xai,nbk_s1_father,moral,parenting,Al,b,rating,minimal,1.0,0,True,2,,"
+
+Al's earlier pattern of engaged, affectionate parenting indicates that his core identity centers on being a caring father; his current disengagement therefore represents a departure from, rather than an expression of, that essential self. 
+
+(The shift itself supplies the only evidence the vignette offers about what his “deepest aspects” are.)",ok,328,64,stop
+d24b5aad9cce2bd6,2026-08-26T05:22:16.744819+00:00,haiku,claude-haiku-4-5,anthropic,nbk_s1_terrorism,moral,political_violence,Amir,b,rating,minimal,1.0,0,False,1,,"
+
+Amir has fundamentally abandoned core values he previously held and that his entire cultural framework reinforces—this represents a departure from his essential self, not a deepening alignment with it. A genuine expression of one's deepest nature involves consistency with one's established values and identity, not their wholesale rejection.",ok,153,68,end_turn
+284c0bfdeb90e601,2026-08-26T05:22:17.579983+00:00,grok,grok-4,xai,nbk_s1_father,moral,parenting,Al,a,rating,minimal,1.0,0,True,7,,"
+
+The change from neglectful to caring father is widely viewed as moral improvement that reveals an underlying, essential ""true self"" rather than a departure from it. Thus the current behavior is seen as more authentic to who Al fundamentally is, even if his past actions were not.",ok,323,56,stop
+0926cd6dbd51bb65,2026-08-26T05:22:18.500633+00:00,haiku,claude-haiku-4-5,anthropic,nbk_s1_employees,moral,workplace_treatment,Bill,a,rating,minimal,1.0,0,False,3,,"
+
+Bill's changed behavior suggests he's acting against his former inclinations rather than expressing his deepest nature. If mistreating employees reflected his essential self, then restraining that impulse means he's not being true to it—he's overriding it, which is actually admirable but doesn't indicate authenticity to his core being.",ok,151,77,end_turn
+226a8e61743fa7fc,2026-08-26T05:22:20.216906+00:00,haiku,claude-haiku-4-5,anthropic,nbk_s1_employees,moral,workplace_treatment,Bill,b,rating,minimal,1.0,0,False,2,,"
+
+His current behavior directly contradicts his established pattern of treating employees with respect and dignity, suggesting he's acting against his fundamental character rather than expressing his deepest nature. People's essential traits are revealed most reliably through consistent behavior over time, and Bill's past conduct appears to be the truer reflection of who he is.",ok,149,72,end_turn
+3ffb3bbd2d96078f,2026-08-26T05:22:20.493433+00:00,grok,grok-4,xai,nbk_s1_terrorism,moral,political_violence,Amir,a,rating,minimal,1.0,0,True,8,,"
+
+Amir's shift away from supporting terrorism, despite cultural pressure to endorse it, suggests he is moving toward a more reflective stance that prioritizes harm avoidance over group conformity. This change implies greater alignment with universal aspects of human reasoning rather than superficial or externally imposed beliefs.",ok,312,55,stop
+79ec56f84b944d34,2026-08-26T05:22:22.185876+00:00,haiku,claude-haiku-4-5,anthropic,nbk_s1_business,moral,business_ethics,Frank,a,rating,minimal,1.0,0,False,9,,"
+
+Frank is being true to his deepest essential nature because authenticity consists in aligning your actions with your considered values and convictions, not in remaining consistent with your past or your environment. His commitment to ethical behavior despite pressure and habit demonstrates genuine integrity—he's choosing who he wants to be rather than defaulting to what he's always done.",ok,155,76,end_turn
+efb510eebdb6fda5,2026-08-26T05:22:22.449518+00:00,grok,grok-4,xai,nbk_s1_terrorism,moral,political_violence,Amir,b,rating,minimal,1.0,0,True,2,,"
+
+Amir's newfound support for terrorism directly contradicts both his established personal history and the moral norms of his culture, indicating a departure from rather than an expression of any stable, essential self. This suggests external influence or inconsistency rather than authenticity to his deepest values.
+
+Final answer: 2",ok,318,58,stop
+823f31a4d0fd81ef,2026-08-26T05:22:22.647238+00:00,grok,grok-4,xai,nbk_s1_employees,moral,workplace_treatment,Bill,a,rating,minimal,1.0,0,True,8,,"
+
+People intuitively regard the ""true self"" as morally good, so Bill's cessation of harmful behavior is readily interpreted as greater alignment with his essential nature. This judgment holds even though we lack other details about his character, because moral improvement tends to be viewed as authenticity rather than mere change.",ok,320,59,stop
+e6e798294f10a664,2026-08-26T05:22:23.966885+00:00,haiku,claude-haiku-4-5,anthropic,nbk_s1_business,moral,business_ethics,Frank,b,rating,minimal,1.0,0,False,1,,"
+
+Frank is abandoning his established pattern of honest conduct and violating the values demonstrated by his consistent past behavior, so he's acting against what his own history reveals about his core character. His new belief represents a departure from, rather than an expression of, his essential self.",ok,156,61,end_turn
+79b654c9a460aac8,2026-08-26T05:22:25.235917+00:00,grok,grok-4,xai,nbk_s1_employees,moral,workplace_treatment,Bill,b,rating,minimal,1.0,0,True,2,,"
+
+Bill's shift to yelling and public embarrassment deviates sharply from his earlier consistent kindness, which better reflects the morally positive core that people normally attribute to a person's ""true self."" The current behavior therefore registers as inauthentic rather than expressive of his deepest nature.
+
+Final answer: 2",ok,321,57,stop
+e17158474d79201f,2026-08-26T05:22:25.943318+00:00,haiku,claude-haiku-4-5,anthropic,nbk_s1_alcohol,moral,alcohol,Jim,a,rating,minimal,1.0,0,False,9,,"
+
+Jim is being true to his deepest nature because his current choice—not to drink—reflects his actual values and agency, whereas his past drinking reflected an addiction that overrode his authentic preferences. Sobriety allows him to act according to what he genuinely wants, making it more aligned with his essential self than his addicted behavior ever was.",ok,141,80,end_turn
+755db88e54309e6b,2026-08-26T05:22:26.053002+00:00,grok,grok-4,xai,nbk_s1_business,moral,business_ethics,Frank,b,rating,minimal,1.0,0,True,1,,"
+
+Frank's established history of honest conduct and workplace norms indicate that ethical behavior forms a core part of his identity; adopting dishonest practices therefore represents a departure from, rather than an expression of, his deepest self.",ok,323,43,stop
+0ae25a98f9d8d321,2026-08-26T05:22:27.275312+00:00,grok,grok-4,xai,nbk_s1_business,moral,business_ethics,Frank,a,rating,minimal,1.0,0,True,8,,"
+
+Frank's shift to ethical behavior reflects an alignment between his actions and his current moral beliefs, which are widely viewed as central to a person's ""true self."" This suggests he is now acting in accordance with the deepest aspects of his identity, rather than past habits or external pressures.",ok,321,57,stop
+1ac4de7412ffcc72,2026-08-26T05:22:27.668941+00:00,haiku,claude-haiku-4-5,anthropic,nbk_s1_alcohol,moral,alcohol,Jim,b,rating,minimal,1.0,0,False,3,,"
+
+Jim's alcoholism appears to contradict rather than express his deepest values—his prior decades-long commitment to abstinence suggests sobriety was genuinely important to him, making his current condition more likely a departure from his core self than an authentic expression of it, though addiction complicates any simple answer since it involves both choice and compulsion.",ok,141,79,end_turn
+645dc4757d6b80c7,2026-08-26T05:22:29.431948+00:00,haiku,claude-haiku-4-5,anthropic,nbk_s1_boyfriend,moral,relationship,Luke,a,rating,minimal,1.0,0,False,5,,"
+
+Luke's behavioral change suggests his essential nature was never simply ""jerk boyfriend""—he's demonstrating capacity for growth that was always part of him. However, without knowing whether this change reflects his authentic values or sustained effort against his true inclinations, I can't say he's fully expressing his deepest self; he may be authentically transformed, or genuinely struggling against ingrained tendencies.",ok,142,87,end_turn
+8bda72066159cd2b,2026-08-26T05:22:29.805223+00:00,grok,grok-4,xai,nbk_s1_alcohol,moral,alcohol,Jim,b,rating,minimal,1.0,0,True,2,,"
+
+Jim's abrupt shift from lifelong teetotalism to alcoholism represents a radical departure from his previously stable preferences and self-conception, making it unlikely to reflect any essential aspect of his being. Such a change is more consistent with compulsion or external influence than with authentic self-expression.",ok,314,57,stop
+3ea424b68c9abc19,2026-08-26T05:22:30.691089+00:00,haiku,claude-haiku-4-5,anthropic,nbk_s1_boyfriend,moral,relationship,Luke,b,rating,minimal,1.0,0,False,1,,"
+
+Luke's current behavior directly contradicts his demonstrated capacity for respect and care shown in his past relationship. Being true to one's essential self would mean acting consistently with one's actual values and capabilities, which his jerk behavior clearly violates.",ok,148,54,end_turn
+160d017ff3508f2e,2026-08-26T05:22:31.112435+00:00,grok,grok-4,xai,nbk_s1_alcohol,moral,alcohol,Jim,a,rating,minimal,1.0,0,True,3,,"
+
+Jim's abrupt shift to complete abstinence lacks any indication of emerging from his own prior values or motivations, implying the change may reflect external pressures rather than alignment with his core self. This disconnect makes the behavior unlikely to express his deepest, essential aspects of being.",ok,314,53,stop
+ac52ccb4e0120a04,2026-08-26T05:22:31.749354+00:00,grok,grok-4,xai,nbk_s1_boyfriend,moral,relationship,Luke,a,rating,minimal,1.0,0,True,7,,"
+
+Luke's positive moral shift toward respectful treatment aligns with widespread intuitions that the ""true self"" is fundamentally good, so his current behavior better reflects essential identity than his past jerk phase. This draws from empirical findings that moral improvement is typically seen as authentic self-realization rather than deviation.",ok,315,58,stop
+25dc97790dc2ac65,2026-08-26T05:22:32.423238+00:00,haiku,claude-haiku-4-5,anthropic,nbk_s1_minorities,moral,ethnic_treatment,Omar,a,rating,minimal,1.0,0,False,3,,"
+
+Omar's change appears to represent a genuine shift in his values and beliefs rather than an expression of his deepest nature. If his previous mistreatment reflected his core character, then his current respectful behavior contradicts rather than embodies his essential self—though this contradiction is morally preferable, it suggests he's working against ingrained tendencies rather than being true to them.",ok,154,84,end_turn
+c91bf4dc176bafa4,2026-08-26T05:22:33.656817+00:00,haiku,claude-haiku-4-5,anthropic,nbk_s1_minorities,moral,ethnic_treatment,Omar,b,rating,minimal,1.0,0,False,1,,"
+
+Omar is abandoning his core values and convictions, not expressing them. Being true to one's essential self means acting consistently with one's deeply held principles—and his past behavior and beliefs demonstrate that equality and respect were central to who he is, making his current mistreatment of minorities a betrayal of that authentic self.",ok,155,74,end_turn
+f906cd703d1b3f1f,2026-08-26T05:22:35.406748+00:00,haiku,claude-haiku-4-5,anthropic,nbk_s1_police,moral,police_corruption,Tom,a,rating,minimal,1.0,0,False,8,,"
+
+Tom is being true to his deepest essential self to a high degree because he's acting according to his current values and choices, which is what ultimately constitutes authentic being. His past corruption doesn't define his essential nature any more than his current ethics does—what matters is that he's aligned his actions with what he genuinely believes is right, despite external pressures and institutional corruption around him.",ok,149,86,end_turn
+7448f5624c70497a,2026-08-26T05:22:36.599220+00:00,grok,grok-4,xai,nbk_s1_minorities,moral,ethnic_treatment,Omar,a,rating,minimal,1.0,0,True,8,,"
+
+By embracing equal rights and respectful treatment, Omar aligns his actions with universal principles of human dignity that transcend his prior cultural conditioning and personal history. This shift suggests an authenticity rooted in core moral capacities rather than unexamined past behaviors.",ok,328,47,stop
+5e91b77ab97043b4,2026-08-26T05:22:36.604849+00:00,grok,grok-4,xai,nbk_s1_boyfriend,moral,relationship,Luke,b,rating,minimal,1.0,0,True,2,,"
+
+Since Luke's past behavior consistently showed respect and affection, his current shift to mistreatment is best viewed as a deviation from—rather than an expression of—his essential self. Folk intuitions about authenticity typically treat such moral declines as departures from the true self.",ok,321,53,stop
+47c0ae786373c45e,2026-08-26T05:22:38.053087+00:00,haiku,claude-haiku-4-5,anthropic,nbk_s1_police,moral,police_corruption,Tom,b,rating,minimal,1.0,0,False,1,,"
+
+Tom is acting fundamentally contrary to his established character and values—his past behavior demonstrates that ethical conduct represents his genuine nature, while corruption represents a departure from it. His current actions contradict the deepest aspects of who he has shown himself to be.",ok,155,57,end_turn
+dc3e43264aef4f45,2026-08-26T05:22:39.245678+00:00,grok,grok-4,xai,nbk_s1_minorities,moral,ethnic_treatment,Omar,b,rating,minimal,1.0,0,True,2,,"
+
+Omar's reversal to mistreating minorities and rejecting equal rights departs sharply from his prior respectful stance, which aligns more closely with widely shared positive human values; psychological research on the ""true self"" consistently shows people attribute moral improvement (not decline) to authenticity. 
+
+(The ""deeper essence"" framing therefore yields a low rating on the scale.)",ok,330,71,stop
+82f9c889ea76f84f,2026-08-26T05:22:39.910114+00:00,haiku,claude-haiku-4-5,anthropic,nbk_s1_pets,preference,pets,Alex,a,rating,minimal,1.0,0,False,7,,"
+
+Alex is being true to his deepest self by following his genuine preferences as they've evolved, which reflects authenticity and self-knowledge. However, the rating isn't higher because changing fundamental preferences suggests either his earlier dog preference wasn't deeply essential, or his identity is somewhat malleable—either way, this introduces some ambiguity about what his ""deepest"" nature actually is.",ok,127,84,end_turn
+adb037e362940236,2026-08-26T05:22:41.404561+00:00,grok,grok-4,xai,nbk_s1_police,moral,police_corruption,Tom,a,rating,minimal,1.0,0,True,8,,"
+
+Tom is now consistently choosing ethical conduct despite ongoing pressure from his corrupt station and his own prior participation, which aligns with the common view that the ""true self"" is fundamentally moral. This suggests his current behavior reflects the deepest aspects of his being more than his past actions do.",ok,322,57,stop
+f8958eab271f976c,2026-08-26T05:22:41.590506+00:00,haiku,claude-haiku-4-5,anthropic,nbk_s1_pets,preference,pets,Alex,b,rating,minimal,1.0,0,False,7,,"
+
+Alex is being reasonably true to his essential self by following his genuine preferences—what matters most is that he's acting on his authentic current values rather than adhering to past patterns. However, it's not a perfect 9 because we can't fully know whether this preference shift reflects his deepest nature or might itself be temporary or influenced by external factors.",ok,127,79,end_turn
+c464f1fd5aa96c15,2026-08-26T05:22:41.590506+00:00,grok,grok-4,xai,nbk_s1_police,moral,police_corruption,Tom,b,rating,minimal,1.0,0,True,2,,"
+
+Tom's history of consistent ethical conduct in an anti-corruption environment indicates his core identity aligns with integrity, making his current corrupt behavior a departure from those essential aspects rather than an expression of them. This shift reflects external influences or weakness overriding his established moral self, not authenticity.",ok,326,57,stop
+5fb541b18c5bbcd2,2026-08-26T05:22:43.514803+00:00,haiku,claude-haiku-4-5,anthropic,nbk_s1_computers,preference,computers,Ralph,a,rating,minimal,1.0,0,False,5,,"
+
+A switch in hardware preference seems like a relatively surface-level change that wouldn't deeply conflict with or express someone's core values and character—but it also wouldn't particularly reveal those essentials either. Unless Ralph's identity is fundamentally tied to computing choices (which is unlikely), this change is largely orthogonal to his deepest nature.",ok,119,77,end_turn
+5899bd9b2d5fec54,2026-08-26T05:22:45.072400+00:00,haiku,claude-haiku-4-5,anthropic,nbk_s1_computers,preference,computers,Ralph,b,rating,minimal,1.0,0,False,5,,"
+
+A computer choice is a peripheral preference rather than a core aspect of identity. Unless Ralph's essential self is fundamentally defined by Mac usage (which seems unlikely for most people), switching to PC is a practical decision that doesn't fundamentally contradict his deeper nature—though it does represent a genuine change in his expressed preferences.",ok,119,71,end_turn
+01c4950122070db5,2026-08-26T05:22:45.104176+00:00,grok,grok-4,xai,nbk_s1_pets,preference,pets,Alex,a,rating,minimal,1.0,0,True,2,,"
+
+Pet preferences are superficial tastes, not core traits like values or personality, so Alex's switch reveals nothing about fidelity to his essential self. 
+
+The change could even reflect growth or new circumstances rather than inauthenticity.",ok,300,45,stop
+30f7dce5c48f9dbe,2026-08-26T05:22:45.467619+00:00,grok,grok-4,xai,nbk_s1_computers,preference,computers,Ralph,a,rating,minimal,1.0,0,True,1,,"
+
+Switching from PCs to Macs is a superficial consumer preference with no plausible connection to anyone's core identity or essential self. The scenario supplies no information suggesting this change expresses deeper values, traits, or commitments.",ok,293,42,stop
+6e8a2bf0373f4c1e,2026-08-26T05:22:47.139199+00:00,haiku,claude-haiku-4-5,anthropic,nbk_s1_sport,preference,sport,Rob,a,rating,minimal,1.0,0,False,5,,"
+
+Rob's shift reflects a genuine change in his preferences rather than a betrayal of his core self. If we assume his capacity to appreciate sports, form preferences, and adapt his interests based on new experiences are essential to who he is, then changing which sport he prefers while maintaining those capacities could represent authentic development—but it's ambiguous whether this constitutes fidelity to his ""deepest"" self or a departure from it.",ok,134,97,end_turn
+022fc22e11c1056d,2026-08-26T05:22:47.738085+00:00,grok,grok-4,xai,nbk_s1_pets,preference,pets,Alex,b,rating,minimal,1.0,0,True,3,,"
+
+Pet preferences are peripheral and changeable rather than among the deepest, most essential features of identity (such as core values or temperament). Alex’s switch therefore shows ordinary adaptation rather than a notable expression of—or departure from—authenticity to his fundamental self.",ok,300,51,stop
+dbc9f5c1d74a3207,2026-08-26T05:22:49.141645+00:00,grok,grok-4,xai,nbk_s1_computers,preference,computers,Ralph,b,rating,minimal,1.0,0,True,1,,"
+
+Ralph's switch from Mac to PC reflects a practical or circumstantial preference with no evident connection to core values, personality traits, or other defining features of personal identity. Such hardware choices are typically superficial and reversible, so the change does not demonstrate authenticity to anything essential about him.",ok,293,56,stop
+a922d77c19a5c24f,2026-08-26T05:22:49.205008+00:00,haiku,claude-haiku-4-5,anthropic,nbk_s1_sport,preference,sport,Rob,b,rating,minimal,1.0,0,False,5,,"
+
+Rob's change reflects a genuine shift in his preferences, which suggests he's being true to his current self—but the fact that he completely abandoned his former conviction raises questions about whether either belief reflected something deeply essential, or whether he's simply following surface-level enthusiasms that shift over time. True fidelity to one's deepest nature usually involves some consistency of core values, even as specific expressions of them evolve.",ok,134,93,end_turn
+3a10ec54f0428ff3,2026-08-26T05:22:50.262321+00:00,grok,grok-4,xai,nbk_s1_sport,preference,sport,Rob,a,rating,minimal,1.0,0,True,2,,"
+
+Changing his preferred sport is a superficial preference shift unrelated to any core values, personality traits, or fundamental aspects of identity. Such a change therefore provides no evidence that Rob is aligning with (or betraying) his deepest self.",ok,308,47,stop
+619729212ec6f6f1,2026-08-26T05:22:51.031449+00:00,haiku,claude-haiku-4-5,anthropic,nbk_s1_living,preference,living_place,Sam,a,rating,minimal,1.0,0,False,5,,"
+
+Sam could be authentically expressing his genuine preferences—people's values legitimately evolve with new experiences—but he could also be rationalizing a change imposed by circumstance, or adopting his new environment's values to fit in. Without knowing whether his shift reflects discovered truth about himself or constructed justification, we can't determine how deeply it reflects his essential being.",ok,151,81,end_turn
+65c5f886b7a42eb2,2026-08-26T05:22:52.032613+00:00,haiku,claude-haiku-4-5,anthropic,nbk_s1_living,preference,living_place,Sam,b,rating,minimal,1.0,0,False,4,,"
+
+Sam's change could reflect either genuine evolution in his values or simple adaptation to circumstances. Without knowing whether his shift stems from authentic preference discovery or external pressure/rationalization, it's impossible to assess his fidelity to his core self—but the dramatic reversal suggests at least some disconnect between his stated loves and whatever deeper consistency might characterize his essential nature.",ok,151,79,end_turn
+f3048ce89e627309,2026-08-26T05:22:53.737605+00:00,grok,grok-4,xai,nbk_s1_sport,preference,sport,Rob,b,rating,minimal,1.0,0,True,8,,"
+
+Changing a preferred sport reflects a superficial shift in leisure interests, unrelated to any core values, personality traits, or life commitments that constitute essential identity. Thus the change leaves Rob’s fidelity to his deepest self intact.",ok,308,44,stop
+cae2916333f2387e,2026-08-26T05:22:54.844110+00:00,grok,grok-4,xai,nbk_s1_living,preference,living_place,Sam,a,rating,minimal,1.0,0,True,7,,"
+
+Sam’s changed environmental preferences reflect a capacity for genuine adaptation and growth rather than a fixed, immutable essence, so his current enthusiasm for rural life can still be an authentic expression of who he is now. Without evidence that he is suppressing core values or pretending against his feelings, the shift does not indicate inauthenticity.",ok,325,65,stop
+c0f730cc1cb288df,2026-08-26T05:22:56.189696+00:00,grok,grok-4,xai,nbk_s1_living,preference,living_place,Sam,b,rating,minimal,1.0,0,True,5,,"
+
+Sam's shift in stated preferences reflects ordinary human adaptability to new circumstances rather than evidence about any fixed ""essential"" core; without further information on deeper values or consistency under pressure, the scenario is indeterminate on the scale.",ok,325,45,stop
