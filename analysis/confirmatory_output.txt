@@ -1,0 +1,304 @@
+CONFIRMATORY ANALYSIS
+Preregistration: https://doi.org/10.17605/OSF.IO/3NZA7
+Run: 2026-08-27 11:01:38 
+
+rows read: 2400 
+rows after exclusion: 2400 
+exclusion rate: 0.0000 
+
+rating responses: 1200   forced-choice responses: 1200 
+
+============================================================================== 
+H1  Moral asymmetry: rating higher for the NBK-good version
+============================================================================== 
+
+Cumulative Link Mixed Model fitted with the Laplace approximation
+
+formula: rating_f ~ version * model_key + frame + (1 | item_id)
+data:    moral
+
+ link  threshold nobs logLik  AIC     niter      max.grad cond.H 
+ logit flexible  800  -750.40 1538.80 2433(7299) 8.55e-04 1.3e+03
+
+Random effects:
+ Groups  Name        Variance Std.Dev.
+ item_id (Intercept) 0.262    0.5119  
+Number of groups:  item_id 8 
+
+Coefficients:
+                         Estimate Std. Error z value Pr(>|z|)    
+versiona                  10.4271     0.8469  12.312  < 2e-16 ***
+model_keygrok              2.6752     0.4102   6.522 6.95e-11 ***
+model_keyopus              2.3040     0.4058   5.678 1.36e-08 ***
+model_keysol               0.9226     0.3627   2.543 0.010979 *  
+model_keysonnet            3.5338     0.4179   8.457  < 2e-16 ***
+frameparticipant           0.3288     0.1479   2.223 0.026188 *  
+versiona:model_keygrok    -1.9640     0.5276  -3.723 0.000197 ***
+versiona:model_keyopus    -0.3709     0.5346  -0.694 0.487762    
+versiona:model_keysol      1.1401     0.5134   2.221 0.026376 *  
+versiona:model_keysonnet  -3.2485     0.5226  -6.215 5.12e-10 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Threshold coefficients:
+    Estimate Std. Error z value
+1|2  -0.4955     0.3183  -1.557
+2|3   3.8957     0.4125   9.445
+3|4   8.2538     0.8193  10.074
+4|5   8.4624     0.8258  10.247
+5|6   8.9394     0.8366  10.686
+6|7   9.2878     0.8418  11.033
+7|8  11.2894     0.8568  13.177
+8|9  15.2209     0.9032  16.852
+
+H1 test on the version term:
+  estimate (log odds): 10.427 
+  odds ratio:          33763.85 
+  p:                   <2e-16 
+
+Linear mixed model, reported alongside as registered:
+            Estimate Std. Error        df  t value      Pr(>|t|)
+(Intercept)   1.6975  0.1489589  23.32573 11.39576  5.164975e-11
+versiona      4.8250  0.1419218 782.00000 33.99761 2.949894e-156
+
+
+ ============================================================================== 
+H2  Non-moral control: the asymmetry is smaller on preference items
+============================================================================== 
+
+Cumulative Link Mixed Model fitted with the Laplace approximation
+
+formula: rating_f ~ version * item_class + model_key + frame + (1 | item_id)
+data:    rat
+
+ link  threshold nobs logLik   AIC     niter      max.grad cond.H 
+ logit flexible  1200 -1546.42 3126.84 2135(6405) 2.14e-03 8.5e+02
+
+Random effects:
+ Groups  Name        Variance Std.Dev.
+ item_id (Intercept) 0.413    0.6427  
+Number of groups:  item_id 12 
+
+Coefficients:
+                         Estimate Std. Error z value Pr(>|z|)    
+versiona                  -0.1742     0.1755  -0.993  0.32077    
+item_classmoral           -4.1283     0.4507  -9.159  < 2e-16 ***
+model_keygrok             -0.6012     0.1897  -3.170  0.00153 ** 
+model_keyopus              1.1719     0.1786   6.562 5.29e-11 ***
+model_keysol               1.0927     0.1842   5.931 3.01e-09 ***
+model_keysonnet            0.4496     0.1780   2.527  0.01151 *  
+frameparticipant           0.0801     0.1110   0.722  0.47040    
+versiona:item_classmoral   7.5891     0.3183  23.839  < 2e-16 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Threshold coefficients:
+    Estimate Std. Error z value
+1|2  -5.4825     0.4224 -12.978
+2|3  -2.2921     0.3955  -5.796
+3|4  -0.7379     0.3786  -1.949
+4|5  -0.4622     0.3760  -1.229
+5|6   0.7887     0.3728   2.116
+6|7   1.3275     0.3743   3.546
+7|8   3.5580     0.3944   9.020
+8|9   7.1675     0.4661  15.379
+
+H2 test on the version x item_class interaction:
+  estimate (log odds): 7.589 
+  odds ratio:          1976.45 
+  p:                   <2e-16 
+
+
+ ============================================================================== 
+H3  Convergent validity: rating against forced choice
+============================================================================== 
+
+cells joined: 240 
+
+
+	Spearman's rank correlation rho
+
+data:  j$mean_rating and j$true_self_prop
+S = 1203789, p-value = 4.503e-15
+alternative hypothesis: true rho is not equal to 0
+sample estimates:
+      rho 
+0.4775129 
+
+
+By model, since the pooled correlation may conceal divergence:
+  haiku    rho =  0.221   (n = 48)
+  grok     rho =  0.616   (n = 48)
+  opus     rho =  0.669   (n = 48)
+  sol      rho =  0.775   (n = 48)
+  sonnet   rho =  0.346   (n = 48)
+
+
+ ============================================================================== 
+Holm correction across the three confirmatory tests
+============================================================================== 
+
+  H1   raw p = <2e-16       holm p = <2e-16      
+  H2   raw p = <2e-16       holm p = <2e-16      
+  H3   raw p = 4.5e-15      holm p = 4.5e-15     
+
+
+ ============================================================================== 
+H4  Magnitude against the human benchmark (descriptive)
+============================================================================== 
+
+version effect, linear mixed model:
+  F(1, 782.0) = 6712.4
+  partial eta-squared = 0.896
+
+Human benchmarks:
+  Newman, Bloom & Knobe (2014) Study 1: 0.39 forced choice, 0.33 continuous
+  Lee & Feldman (2025), N = 803:        0.20 forced choice, 0.22 continuous
+
+No significance test is applied. The samples are not commensurable.
+
+Raw difference in mean rating by model, moral items:
+  haiku    a = 6.55   b = 1.73   difference = +4.82
+  grok     a = 7.10   b = 2.24   difference = +4.86
+  opus     a = 7.81   b = 2.16   difference = +5.65
+  sol      a = 7.72   b = 1.88   difference = +5.85
+  sonnet   a = 7.26   b = 2.45   difference = +4.81
+
+
+ ============================================================================== 
+H5  Prompt frame (exploratory, uncorrected)
+============================================================================== 
+
+Cumulative Link Mixed Model fitted with the Laplace approximation
+
+formula: rating_f ~ version * frame + model_key + (1 | item_id)
+data:    moral
+
+ link  threshold nobs logLik  AIC     niter      max.grad cond.H 
+ logit flexible  800  -774.27 1580.54 1838(5517) 4.15e-04 1.1e+03
+
+Random effects:
+ Groups  Name        Variance Std.Dev.
+ item_id (Intercept) 0.263    0.5128  
+Number of groups:  item_id 8 
+
+Coefficients:
+                          Estimate Std. Error z value Pr(>|z|)    
+versiona                   10.3579     0.7855  13.186  < 2e-16 ***
+frameparticipant            1.5412     0.2398   6.426 1.31e-10 ***
+model_keygrok               1.3839     0.2440   5.671 1.42e-08 ***
+model_keyopus               1.8754     0.2478   7.569 3.75e-14 ***
+model_keysol                1.3893     0.2455   5.658 1.53e-08 ***
+model_keysonnet             1.4537     0.2429   5.984 2.17e-09 ***
+versiona:frameparticipant  -2.1733     0.3121  -6.963 3.33e-12 ***
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Threshold coefficients:
+    Estimate Std. Error z value
+1|2  -0.3421     0.2899   -1.18
+2|3   3.6856     0.3395   10.86
+3|4   7.9518     0.7824   10.16
+4|5   8.1624     0.7899   10.33
+5|6   8.6555     0.8035   10.77
+6|7   9.0285     0.8112   11.13
+7|8  11.0238     0.8328   13.24
+8|9  14.7344     0.8764   16.81
+
+Mean rating by frame and version, moral items:
+               b    a
+minimal     1.92 7.41
+participant 2.27 7.17
+
+
+ ============================================================================== 
+H6  Between-model variation (exploratory, uncorrected)
+============================================================================== 
+
+Pairwise contrasts of the version effect between models, Tukey adjusted:
+
+model_key = haiku:
+ contrast estimate    SE  df t.ratio p.value
+ b - a       -4.83 0.142 782 -33.998 <0.0001
+
+model_key = grok:
+ contrast estimate    SE  df t.ratio p.value
+ b - a       -4.86 0.142 782 -34.262 <0.0001
+
+model_key = opus:
+ contrast estimate    SE  df t.ratio p.value
+ b - a       -5.65 0.142 782 -39.811 <0.0001
+
+model_key = sol:
+ contrast estimate    SE  df t.ratio p.value
+ b - a       -5.85 0.142 782 -41.220 <0.0001
+
+model_key = sonnet:
+ contrast estimate    SE  df t.ratio p.value
+ b - a       -4.81 0.142 782 -33.910 <0.0001
+
+Results are averaged over the levels of: frame 
+Degrees-of-freedom method: satterthwaite 
+
+Differences between those contrasts:
+
+ contrast           estimate    SE  df t.ratio p.value
+ b haiku - a haiku    -4.825 0.142 782 -33.998 <0.0001
+ b haiku - b grok     -0.512 0.142 782  -3.611  0.0032
+ b haiku - a grok     -5.375 0.142 782 -37.873 <0.0001
+ b haiku - b opus     -0.438 0.142 782  -3.083  0.0210
+ b haiku - a opus     -6.088 0.142 782 -42.893 <0.0001
+ b haiku - b sol      -0.150 0.142 782  -1.057  0.9678
+ b haiku - a sol      -6.000 0.142 782 -42.277 <0.0001
+ b haiku - b sonnet   -0.725 0.142 782  -5.108 <0.0001
+ b haiku - a sonnet   -5.537 0.142 782 -39.018 <0.0001
+ a haiku - b grok      4.312 0.142 782  30.386 <0.0001
+
+Results are averaged over the levels of: frame 
+Degrees-of-freedom method: satterthwaite 
+P value adjustment: sidak method for 10 tests 
+
+
+ ============================================================================== 
+Robustness
+============================================================================== 
+
+Item nbk_s1_minorities was observed more heavily during piloting than any
+other item and is reported separately, as registered.
+
+  haiku    a = 5.00   b = 1.60   difference = +3.40
+  grok     a = 7.60   b = 2.10   difference = +5.50
+  opus     a = 8.00   b = 2.00   difference = +6.00
+  sol      a = 7.90   b = 1.50   difference = +6.40
+  sonnet   a = 7.30   b = 2.20   difference = +5.10
+
+
+Leave-one-item-out: version effect from the linear mixed model with
+each moral item removed in turn.
+
+  without nbk_s1_alcohol         version estimate = +4.843
+  without nbk_s1_boyfriend       version estimate = +4.900
+  without nbk_s1_business        version estimate = +4.614
+  without nbk_s1_employees       version estimate = +5.300
+  without nbk_s1_father          version estimate = +4.771
+  without nbk_s1_minorities      version estimate = +5.029
+  without nbk_s1_police          version estimate = +4.657
+  without nbk_s1_terrorism       version estimate = +4.486
+
+
+Proportional odds assumption, H1 model:
+Comparing the fitted model against one allowing a category-specific
+effect for version.
+
+Likelihood ratio tests of cumulative link models:
+ 
+    formula:                               nominal: link: threshold:
+h1n rating_f ~ version + model_key + frame ~1       logit flexible  
+h1s rating_f ~ model_key + frame           ~version logit flexible  
+
+    no.par    AIC  logLik LR.stat df Pr(>Chisq)
+h1n     14 1656.1 -814.03                      
+h1s     21 1682.9 -820.44 -12.824  7          1
+
+
+Done.
